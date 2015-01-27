@@ -7,10 +7,13 @@ import usaddress
 
 app = Flask(__name__)
 
+@app.route('/status', methods=['GET'])
+def index():
+    return jsonify({"status":"OK"})
+
 @app.route('/address/parse', methods=['POST'])
 def parse_address():
     if not request.json or not 'address' in request.json:
-        print('received: ' + reuest)
         abort(400)
     result = {}
     components = usaddress.parse(request.json['address']) 
@@ -28,7 +31,7 @@ def parse_address():
 
 @app.errorhandler(404)
 def not_found(error):
-    return make_response(jsonify({'error':'Not Found'}), 404)
+    return make_response(jsonify({'error':error}), 404)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0',debug=True)
