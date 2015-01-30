@@ -12,7 +12,7 @@ pip install usaddress
 pip install flask
 ```
 
-## Usage
+# Running
 
 The service can be run directly with:
 
@@ -24,6 +24,8 @@ Alternatively, this microservice can be run with Docker:
 
 To build, run `docker build --rm --tag=jmarin/addressparser`
 A container can be started by running `docker run -ti -5000:5000 jmarin/addressparser`
+
+## Usage
 
 Send a POST request to `/addresses/parse` with a JSON object such as the following:
 
