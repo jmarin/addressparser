@@ -1,4 +1,4 @@
-# Docker image for OSM tools
+# Docker image for addressparser
 # To build, run docker build --rm --tag=jmarin/addressparser
 # A container can be started by running docker run -ti -5000:5000 jmarin/addressparser
 
