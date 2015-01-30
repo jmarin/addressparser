@@ -20,6 +20,11 @@ The service can be run directly with:
 python app.py
 ```
 
+Alternatively, this microservice can be run with Docker:
+
+To build, run `docker build --rm --tag=jmarin/addressparser`
+A container can be started by running `docker run -ti -5000:5000 jmarin/addressparser`
+
 Send a POST request to `/addresses/parse` with a JSON object such as the following:
 
 ```json
