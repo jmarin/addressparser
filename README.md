@@ -27,7 +27,7 @@ A container can be started by running `docker run -ti -5000:5000 jmarin/addressp
 
 ## Usage
 
-Send a POST request to `/addresses/parse` with a JSON object such as the following:
+Send a POST request to `/address/parse` with a JSON object such as the following:
 
 ```json
 {
