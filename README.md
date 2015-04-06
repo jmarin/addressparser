@@ -23,7 +23,7 @@ python app.py
 Alternatively, this microservice can be run with Docker:
 
 To build, run `docker build --rm --tag=jmarin/addressparser`
-A container can be started by running `docker run -ti -5000:5000 jmarin/addressparser`
+A container can be started by running `docker run -ti -p 5000:5000 jmarin/addressparser`
 
 ## Usage
 
